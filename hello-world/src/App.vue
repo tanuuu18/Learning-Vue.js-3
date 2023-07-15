@@ -2,7 +2,7 @@
   <!-- Text interpolation -->
   <div>{{greet}} {{name}}</div>
   <!-- Using Directives -->
-  <div v-text="learning"></div>
+  <div v-html="learning"></div>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
     return {
       greet:"Hello",
       name:"Tanushree",
-      learning:"Vue Js"
+      learning:"<b>Vue Js</b>"
     }
   }
 }
