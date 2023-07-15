@@ -1,9 +1,10 @@
 <template>
-
+  <!-- Text interpolation -->
+  <div>Hello {{name}}</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
