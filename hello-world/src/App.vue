@@ -1,8 +1,9 @@
 <template>
   <!-- Text interpolation -->
   <div>{{greet}} {{name}}</div>
-  <!-- Using Directives -->
+  <!-- Binding HTML -->
   <div v-html="learning"></div>
+  <div v-html="hack"></div>
 </template>
 
 <script>
@@ -14,7 +15,8 @@ export default {
     return {
       greet:"Hello",
       name:"Tanushree",
-      learning:"<b>Vue Js</b>"
+      learning:"<b>Vue Js</b>",
+      hack:`<a href="#" onclick="alert('You have been hacked!')">Win a Prize</a>`
     }
   }
 }
