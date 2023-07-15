@@ -1,4 +1,5 @@
-# Binding Text
+# Binding Text 
+ Use if you want to dynamically update the property value.
 
 
 
