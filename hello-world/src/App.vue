@@ -1,36 +1,18 @@
 <template>
   
-  <h2  :id="headingId">Heading</h2>
-  <button  :disabled="isDisabled">Bind</button>
-  <h2 class="underline">Underlined text</h2>
-  <h2 class="underline"   :class="status">Status</h2>
-  <h2  :class="isPromoted && 'promoted'">Promoted Movie</h2>
-  <!-- Conditional Binding of class -->
-  <h2  :class="isSoldout ? 'sold-out':'new'">Soldout ? movie</h2>
-  <!-- Array binding of class -->
-  <h2  :class="['new','promoted']">Newly promoted movie</h2>
-  <h2  :class="[isPromoted && 'promoted',isSoldout ? 'sold-out':'new']">Array conditional movie</h2>
-  <!-- Object binding of class -->
-  <h2  :class="{
-    promoted: isPromoted,
-    new: !isSoldout,
-    'sold-out':isSoldout
-  }">Object conditional movie</h2>
+  <!-- Conditional rendering -->
+  <h2 v-if="num === 0">The number is zero</h2>
+  <h2 v-else-if="num < 0">The number is negative</h2>
+  <h2 v-else-if="num > 0">The number is positive</h2>
+  <h2 v-else>Not a number</h2>
 
-  <!-- Object syntax -->
- <!-- font-size is not a single word so, append it with ''.
- instead of this we can use camel-case i.e. fontSize -->
-  <h2  :style="{
-    color:highlightColor,
-    fontSize:headerSize+'px',
-    padding:'20px'
-  }">Inline Style</h2>
-
-  <h2  :style="headerStyleObject">Style Object</h2>
-  <!-- Array syntax -->
-  <!-- override the previous style object if same property changes -->
-  <div  :style="[baseStyleObject,successStyleObject]">Success Style</div>
-  <div  :style="[baseStyleObject,dangerStyleObject]">Danger Style</div>
+  <!-- Conditional rendering multiple elements -->
+  <!-- change this div to template tag then we will not see additional div tag in DOM. -->
+  <template v-if="display">
+    <h2>Tanushree</h2>
+    <h2>Software Developer</h2>
+    <h2>Vue</h2>
+  </template>
   
 </template>
 
@@ -41,32 +23,8 @@ export default {
   name: 'App',
   data(){
     return {
-      headingId:"heading",
-      isDisabled:true,
-      status:"success",
-      isPromoted:true,
-      isSoldout:true,
-      highlightColor:'orange',
-      headerSize:50,
-      headerStyleObject:{
-        color:"orange",
-         fontSize:'50px',
-        padding:'20px'
-      },
-      baseStyleObject:{
-         fontSize:"50px",
-        padding:"10px",
-      },
-      successStyleObject:{
-        color:"green",
-        backgroundColor:"lightgreen",
-        border:"1px solid green",
-        padding:"20px"
-      },
-     dangerStyleObject:{
-      color:"darked",
-      backgroundColor:"red",
-      border:"1px solid darked",
+     num: "Hi",
+      display: true,
      },
     }
   }
@@ -81,19 +39,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-  .underline{
-  text-decoration: underline;
-}
-  
-.promoted{
-  font-style: italic;
-}
-.new{
-  color: olivedrab;
-}
-
-.sold-out{
-  color: red;
 }
 </style>
