@@ -3,7 +3,7 @@
   <h2 v-bind:id="headingId">Heading</h2>
   <button v-bind:disabled="isDisabled">Bind</button>
   <h2 class="underline">Underlined text</h2>
-  <h2 v-bind:class="status">Status</h2>
+  <h2 class="underline"  v-bind:class="status">Status</h2>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
     return {
       headingId:"heading",
       isDisabled:true,
-      status:"danger"
+      status:"success"
     }
   }
 }
