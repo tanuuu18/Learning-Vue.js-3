@@ -1,11 +1,13 @@
-# Binding Classes
+# Conditional Rendering
 
 
-## There are 2 ways fot binding the styles:
+## For conditional rendering, we have 4 directives
 <ol>
-  <li>Object syntax: Bind the style attributes with javascript object.</li>
+  <li>v-if</li>
 
-<li>Array syntax: Allows you to apply multiple style object in same html element</li>
+<li>v-else</li>
+<li>v-else-if</li>
+<li>v-show</li>
 
 </ol>
 
