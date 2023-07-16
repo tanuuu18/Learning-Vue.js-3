@@ -1,20 +1,28 @@
 <template>
-  
-  <!-- Conditional rendering -->
-  <h2 v-if="num === 0">The number is zero</h2>
-  <h2 v-else-if="num < 0">The number is negative</h2>
-  <h2 v-else-if="num > 0">The number is positive</h2>
-  <h2 v-else>Not a number</h2>
+  <!-- Array of Strings -->
+  <h2 v-for="name in names" :key="name">{{ name }}</h2>
+  <!-- with index -->
+  <h2 v-for="(name, index) in names" :key="name">{{ index }} {{ name }}</h2>
 
-  <!-- Conditional rendering multiple elements -->
-  <!-- change this div to template tag then we will not see additional div tag in DOM. -->
-  <template v-if="display">
-    <h2>Tanushree</h2>
-    <h2>Software Developer</h2>
-    <h2>Vue</h2>
+  <!-- Array of Objects -->
+  <h2 v-for="name in fullNames" :key="name.first">
+    {{ name.first }} {{ name.last }}
+  </h2>
+
+  <!-- Array of Arrays -->
+  <div v-for="actor in actors" :key="actor.name">
+    <h2>{{ actor.name }}</h2>
+    <h3 v-for="movie in actor.movies" :key="movie">{{ movie }}</h3>
+  </div>
+  <!-- Object of key-value pairs -->
+  <h2 v-for="(value, key, index) in myInfo" :key="value">
+    {{ index }} {{ key }} {{ value }}
+  </h2>
+  <!-- Block of HTML elements  -> use template tag -->
+  <template v-for="name in names" :key="name">
+    <h2>{{ name }}</h2>
+    <hr />
   </template>
-  <!-- V-show -->
-  <h2 v-show="showElement">Using v-show</h2>
   
 </template>
 
@@ -25,13 +33,30 @@ export default {
   name: 'App',
   data(){
     return {
-     num: "Hi",
-      display: true,
-      showElement: false,
-     },
-    }
-  }
-}
+    names: ["Tanu", "Sumit", "Khushi"],
+      fullNames: [
+        { first: "Bruce", last: "Wayne" },
+        { first: "Clark", last: "Kent" },
+        { first: "Princess", last: "Diana" },
+      ],
+      actors: [
+        {
+          name: "Christian Bale",
+          movies: ["Batman", "The Prestige"],
+        },
+        {
+          name: "Di Caprio",
+          movies: ["Titanic", "Inception"],
+        },
+      ],
+      myInfo: {
+        name: "Tanu",
+        profession: "Software Developer",
+        learning: "Vue Js",
+      },
+    };
+  },
+};
 </script>
 
 <style>
