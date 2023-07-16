@@ -20,7 +20,7 @@ export default {
       learning:"<b>Vue Js</b>",
       hack:`<a href="#" onclick="alert('You have been hacked!')">Win a Prize</a>`,
       headingId:"heading",
-      isDisabled:true
+      isDisabled:false
     }
   }
 }
