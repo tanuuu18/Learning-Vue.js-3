@@ -1,15 +1,11 @@
 # Binding Classes
 
 
-## There are 2 ways fot binding the classes:
+## There are 2 ways fot binding the styles:
 <ol>
-  <li>Static class: Static class are the ones who will never change and will always be present on the HTML element.</li>
+  <li>Object syntax: Bind the style attributes with javascript object.</li>
 
-
- But, in a web app you might want to manipulate an element's list of classes.
- 
- In other words, you need Dynamic classes which allows you to add or remove classes when things change in your application.
-<li>Dynamic class: Dynamic classes are similar to static classes. But, we have to use then <b>v-bind</b> directives in order to bind a javascript expression to our class.</li>
+<li>Array syntax: Allows you to apply multiple style object in same html element</li>
 
 </ol>
 
