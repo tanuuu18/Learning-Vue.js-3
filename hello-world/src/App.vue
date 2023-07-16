@@ -16,6 +16,21 @@
     new: !isSoldout,
     'sold-out':isSoldout
   }">Object conditional movie</h2>
+
+  <!-- Object syntax -->
+ <!-- font-size is not a single word so, append it with ''.
+ instead of this we can use camel-case i.e. fontSize -->
+  <h2 v-bind:style="{
+    color:highlightColor,
+    fontSize:headerSize+'px',
+    padding:'20px'
+  }">Inline Style</h2>
+
+  <h2 v-bind:style="headerStyleObject">Style Object</h2>
+  <!-- Array syntax -->
+  <!-- override the previous style object if same property changes -->
+  <div v-bind:style="[baseStyleObject,successStyleObject]">Success Style</div>
+  <div v-bind:style="[baseStyleObject,dangerStyleObject]">Danger Style</div>
   
 </template>
 
@@ -30,7 +45,29 @@ export default {
       isDisabled:true,
       status:"success",
       isPromoted:true,
-      isSoldout:true
+      isSoldout:true,
+      highlightColor:'orange',
+      headerSize:50,
+      headerStyleObject:{
+        color:"orange",
+         fontSize:'50px',
+        padding:'20px'
+      },
+      baseStyleObject:{
+         fontSize:"50px",
+        padding:"10px",
+      },
+      successStyleObject:{
+        color:"green",
+        backgroundColor:"lightgreen",
+        border:"1px solid green",
+        padding:"20px"
+      },
+     dangerStyleObject:{
+      color:"darked",
+      backgroundColor:"red",
+      border:"1px solid darked",
+     },
     }
   }
 }
