@@ -13,6 +13,8 @@
     <h2>Software Developer</h2>
     <h2>Vue</h2>
   </template>
+  <!-- V-show -->
+  <h2 v-show="showElement">Using v-show</h2>
   
 </template>
 
@@ -25,6 +27,7 @@ export default {
     return {
      num: "Hi",
       display: true,
+      showElement: false,
      },
     }
   }
