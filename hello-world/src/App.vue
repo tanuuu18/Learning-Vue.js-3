@@ -4,6 +4,11 @@
     <!-- On hovering the button name will change to batman -->
     <button v-on:mouseover="name = 'Batman'">Change name</button>
   </div>
+   <h2>{{ count }}</h2>
+  <div>
+    <button v-on:click="count += 1">Increment</button>
+    <button v-on:click="count -= 1">Decrement</button>
+  </div>
 </template>
 
 <script>
@@ -14,6 +19,7 @@ export default {
   data(){
     return {
         name: "Tanu",
+        count: 0,
     };
   },
    methods: {
