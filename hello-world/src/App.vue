@@ -6,8 +6,10 @@
   </div>
    <h2>{{ count }}</h2>
   <div>
-    <button v-on:click="increment">Increment</button>
-    <button v-on:click="decrement">Decrement</button>
+    <button v-on:click="increment(1)">Increment 1</button>
+    <button v-on:click="increment(5)">Increment 5</button>
+    <button v-on:click="decrement(1)">Decrement 1</button>
+    <button v-on:click="decrement(5)">Decrement 5</button>
   </div>
 </template>
 
@@ -23,11 +25,11 @@ export default {
     };
   },
    methods: {
-      increment() {
-      this.count += 1;
+    increment(num) {
+      this.count += num;
     },
-    decrement() {
-      this.count -= 1;
+    decrement(num) {
+      this.count -= num;
     },
   },
 };
