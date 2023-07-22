@@ -13,6 +13,8 @@
   <li>Radio</li>
   <li>Submit form data</li>
 </ul>
-
+<p align="center">
+  <img src="Form handling.png" title="hover text">
+</p>
 
 
