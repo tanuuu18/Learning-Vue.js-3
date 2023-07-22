@@ -2,7 +2,8 @@
    <h2>{{ name }}</h2>
   <div>
     <!-- On clicking the button name will change to batman -->
-    <button v-on:click="changeName">Change name</button>
+     <!-- Multiple event object handler -->
+    <button v-on:click="changeName($event), increment(1, $event)">Change name</button>
   </div>
    <h2>{{ count }}</h2>
   <div>
