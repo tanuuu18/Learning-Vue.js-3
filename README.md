@@ -1,10 +1,13 @@
-# Modifiers
+# Bonus Directives
 
 
 
 <ul>
-  <li>A suffix you can add to either the <b><i>v-on</i></b> directive <b><i>v-model</i></b> directive to add some functionality inline within the template.</li>
-    <li>Helps you write cleaner code.</li>
+  <li> <i><b>v-once </b> :</i> <br/> Renders the corresponding HTML element only once. On subsequent re-renders, the element is treated as static content and skipped.</li>
+  <li>
+    <i><b>v-pre </b> :</i> <br/> 
+    Skips compilation for the corresponding element.
+  </li>
 </ul>
 
 
