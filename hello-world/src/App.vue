@@ -25,8 +25,10 @@ export default {
     };
   },
    methods: {
-      changeName() {
+    // Event object automatically passes in if you don't specify in argument
+      changeName(event) {
       this.name = "Batman";
+      console.log("Events", event);
     },
     increment(num) {
       this.count += num;
