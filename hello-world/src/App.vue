@@ -6,7 +6,6 @@
   </div>
    <h2>{{ count }}</h2>
   <div>
-     <!--Here we used Inline event handlers -->
     <button v-on:click="increment">Increment</button>
     <button v-on:click="decrement">Decrement</button>
   </div>
