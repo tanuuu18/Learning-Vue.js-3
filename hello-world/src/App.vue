@@ -7,8 +7,8 @@
    <h2>{{ count }}</h2>
   <div>
      <!--Here we used Inline event handlers -->
-    <button v-on:click="count += 1">Increment</button>
-    <button v-on:click="count -= 1">Decrement</button>
+    <button v-on:click="increment">Increment</button>
+    <button v-on:click="decrement">Decrement</button>
   </div>
 </template>
 
@@ -24,6 +24,12 @@ export default {
     };
   },
    methods: {
+      increment() {
+      this.count += 1;
+    },
+    decrement() {
+      this.count -= 1;
+    },
   },
 };
 </script>
