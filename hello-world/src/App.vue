@@ -1,8 +1,8 @@
 <template>
    <h2>{{ name }}</h2>
   <div>
-    <!-- On clicking the button name will change to batman -->
-    <button v-on:click="name = 'Batman'">Change name</button>
+    <!-- On hovering the button name will change to batman -->
+    <button v-on:mouseover="name = 'Batman'">Change name</button>
   </div>
 </template>
 
