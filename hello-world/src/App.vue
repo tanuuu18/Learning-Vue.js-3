@@ -1,17 +1,44 @@
 <template>
-   <h2>{{ name }}</h2>
   <div>
-    <!-- On clicking the button name will change to batman -->
-     <!-- Multiple event object handler -->
-    <button v-on:click="changeName($event), increment(1, $event)">Change name</button>
+    <pre>
+      {{ JSON.stringify(formValues, null, 2) }}
+    </pre>
   </div>
-   <h2>{{ count }}</h2>
-  <div>
-    <button @click="increment(1, $event)">Increment 1</button>
-    <button @click="increment(5)">Increment 5</button>
-    <button @click="decrement(1)">Decrement 1</button>
-    <button @click="decrement(5)">Decrement 5</button>
-  </div>
+  <!-- Job search form -->
+  <form action="">
+    <!-- Step 2: Add HTML tag -->
+    <!-- Step 3:bind the data properties using v-model directives -->
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" v-model="formValues.name" />
+    </div>
+    <div>
+      <label for="profile">Profile Summary</label>
+      <textarea id="profile" v-model="formValues.profileSummary" />
+    </div>
+
+    <!-- Single select dropdown -->
+    <div>
+      <label for="country">Country</label>
+      <select id="country" v-model="formValues.country">
+        <option value="">Select a Country</option>
+        <option value="india">India</option>
+        <option value="vietnam">Vietnam</option>
+        <option value="singapore">Singapore</option>
+      </select>
+    </div>
+
+    <!-- Multi-select dropdown -->
+    <div>
+      <label for="job-location">Job Location</label>
+
+      <select id="job-location" multiple v-model="formValues.jobLocation">
+        <option value="india">India</option>
+        <option value="vietnam">Vietnam</option>
+        <option value="singapore">Singapore</option>
+      </select>
+    </div>
+  </form>
 </template>
 
 <script>
@@ -21,23 +48,17 @@ export default {
   name: 'App',
   data(){
     return {
-        name: "Tanu",
-        count: 0,
+        // Step: 1  create data properties
+      formValues: {
+        name: "",
+        profileSummary: "",
+        country: "",
+        jobLocation: [],
+      },
     };
   },
    methods: {
-    // Event object automatically passes in if you don't specify in argument
-      changeName(event) {
-      this.name = "Batman";
-      console.log("Events", event);
-    },
-    increment(num,event) {
-      this.count += num;
-      console.log(event);
-    },
-    decrement(num) {
-      this.count -= num;
-    },
+    
   },
 };
 </script>
@@ -47,8 +68,34 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
+}
+label {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+input + label {
+  font-weight: bold;
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+input[type="text"],
+textarea,
+select {
+  display: block;
+  width: 400px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 </style>
