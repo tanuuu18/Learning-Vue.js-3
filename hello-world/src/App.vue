@@ -5,12 +5,17 @@
     </pre>
   </div>
   <!-- Job search form -->
-  <form @submit="submitForm">
+  
+ <!-- Prevent modifier : equivalent to e.preventDefault() -->
+  <!-- stop the refreshing when you click on submit button -->
+  <form @submit.prevent="submitForm">
     <!-- Step 2: Add HTML tag -->
     <!-- Step 3:bind the data properties using v-model directives -->
     <div>
       <label for="name">Name</label>
-      <input type="text" id="name" v-model="formValues.name" />
+      <!-- Trim modifier: which eliminates ehite space -->
+      <!-- Lazy modifier : modifies the data only when tha change event occurs -->
+      <input type="text" id="name" v-model.trim.lazy="formValues.name" />
     </div>
     <div>
       <label for="profile">Profile Summary</label>
@@ -115,11 +120,27 @@
       />
       <label for="10+">10+</label>
     </div>
+         <!-- 
+Key Modifier: when you want a method to be called when a particular key is
+pressed -->
 
-    <!-- Submit button -->
+    <!-- Want to submit form when user hit enter on age -->
     <div>
+      <label for="age">Age</label>
+      <!-- Numbered modifier -->
+      <!-- Key modifier -->
+      <input
+        @keyup.enter="submitForm"
+        type="number"
+        id="age"
+        v-model.number="formValues.age"
+      />
+   </div>
+    <!-- Submit button -->
+    <!-- Comment for key modifier -->
+    <!-- <div>
       <button>Submit</button>
-    </div>
+    </div> -->
   </form>
 </template>
 
@@ -154,13 +175,17 @@ export default {
 
         //Radio group
         yearsOfExperience: "",
+
+        //for number modifier
+        age: null,
       
       },
     };
   },
    methods: {
-     submitForm(event) {
-      event.preventDefault();
+     submitForm() {
+       //comment it because added prevent modifier on submit method
+      // event.preventDefault();
       console.log("Form values: ", this.formValues);
     },
   },
