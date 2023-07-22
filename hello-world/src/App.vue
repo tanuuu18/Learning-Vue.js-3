@@ -3,7 +3,8 @@
   <h2>{{ 5 + 10 + 15 }}</h2>
    <h2>Add method: {{ add(2, 3, 5) }}</h2>
   <h2>Add method: {{ add(5, 10, 15) }}</h2>
-   <h2>Multiply method: {{ multiply(10) }}</h2>
+  <!-- If you pass the data as an argument then don't require to use this keyword -->
+  <h2>Multiply method: {{ multiply(baseValue) }}</h2>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ export default {
   data(){
     return {
         baseMultiplier: 5,
+       baseValue: 2,
     };
   },
    methods: {
