@@ -1,6 +1,6 @@
 <template>
-   <template v-for="name in names" :key="name">
-    <h2 v-if="name === 'Tanu'">{{ name }}</h2>
+   <h2>{{ 2 + 3 + 5 }}</h2>
+  <h2>{{ 5 + 10 + 15 }}</h2>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
   name: 'App',
   data(){
     return {
-    names: ["Tanu", "Sumit", "Khushi"],
+   
     };
   },
 };
