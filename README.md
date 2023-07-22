@@ -1,20 +1,11 @@
-# Form Handling
+# Modifiers
 
 
 
 <ul>
-  <li>Capture user inputs</li>
-  <li>Inputs</li>
-  <li>Textareas</li>
-  <li>Single select dropdown control</li>
-  <li>Multi select control</li>
-  <li>Checkbox</li>
-  <li>Checkbox group</li>
-  <li>Radio</li>
-  <li>Submit form data</li>
+  <li>A suffix you can add to either the <b><i>v-on</i></b> directive <b><i>v-model</i></b> directive to add some functionality inline within the template.</li>
+    <li>Helps you write cleaner code.</li>
 </ul>
-<p align="center">
-  <img src="Form handling.png" title="hover text">
-</p>
+
 
 
