@@ -1,6 +1,7 @@
 <template>
    <h2>{{ 2 + 3 + 5 }}</h2>
   <h2>{{ 5 + 10 + 15 }}</h2>
+   <h2>Add method: {{ add() }}</h2>
 </template>
 
 <script>
@@ -12,6 +13,11 @@ export default {
     return {
    
     };
+  },
+   methods: {
+    add() {
+      return 2 + 3 + 5;
+    },
   },
 };
 </script>
