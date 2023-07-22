@@ -6,7 +6,7 @@
   </div>
    <h2>{{ count }}</h2>
   <div>
-    <button @click="increment(1)">Increment 1</button>
+    <button @click="increment(1, $event)">Increment 1</button>
     <button @click="increment(5)">Increment 5</button>
     <button @click="decrement(1)">Decrement 1</button>
     <button @click="decrement(5)">Decrement 5</button>
@@ -30,8 +30,9 @@ export default {
       this.name = "Batman";
       console.log("Events", event);
     },
-    increment(num) {
+    increment(num,event) {
       this.count += num;
+      console.log(event);
     },
     decrement(num) {
       this.count -= num;
