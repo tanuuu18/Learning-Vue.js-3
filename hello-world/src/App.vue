@@ -1,8 +1,8 @@
 <template>
    <h2>{{ name }}</h2>
   <div>
-    <!-- On hovering the button name will change to batman -->
-    <button v-on:mouseover="name = 'Batman'">Change name</button>
+    <!-- On clicking the button name will change to batman -->
+    <button v-on:click="changeName">Change name</button>
   </div>
    <h2>{{ count }}</h2>
   <div>
@@ -25,6 +25,9 @@ export default {
     };
   },
    methods: {
+      changeName() {
+      this.name = "Batman";
+    },
     increment(num) {
       this.count += num;
     },
