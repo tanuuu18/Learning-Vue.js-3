@@ -1,13 +1,21 @@
-# Bonus Directives
+# Computed Properties
 
 
 
 <ul>
-  <li> <i><b>v-once </b> :</i> <br/> Renders the corresponding HTML element only once. On subsequent re-renders, the element is treated as static content and skipped.</li>
   <li>
-    <i><b>v-pre </b> :</i> <br/> 
-    Skips compilation for the corresponding element.
+    Ways to display data in the UI
+    <ul>
+      <li>Static HTML</li>
+      <li>Text interpolation</li>
+      <li>Simple expressions</li>
+      <li>Methods</li>
+      <li>Computed properties</li>
+    </ul>
   </li>
+  <li>Properties that can be bound to the template like data properties.</li>
+  <li>They are used for composing new data from existing sources.</li>
+  <li>They are highly performant as they are cached calculations which only update when their dependencies change.</li>
 </ul>
 
 
