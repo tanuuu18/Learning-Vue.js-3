@@ -1,11 +1,6 @@
 <template>
- <!-- v-once Directive -->
-  <h2 v-once>{{ name }}</h2>
-
-  <button @click="name = 'Tanushree'">Change name</button>
-
-  <!-- v-pre Directive -->
-  <h2 v-pre>{{ name }}</h2>
+ <h2>Fullname - {{ firstName }} {{ lastName }}</h2>
+  <h2>Computed fullname: {{ fullName }}</h2>
 </template>
 
 <script>
@@ -15,10 +10,15 @@ export default {
   name: 'App',
   data(){
     return {
-        name: "Tanu",
+       firstName: "Tanu",
+      lastName: "Shree",
     };
   },
    methods: { },
+  computed: {
+    fullName() {
+      return `${this.firstName} ${this.lastName}`;
+    },
   },
 };
 </script>
