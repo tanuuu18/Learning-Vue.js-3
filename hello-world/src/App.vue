@@ -3,10 +3,11 @@
 <!-- composed new data properties from existing properties -->
  <h2>Fullname - {{ firstName }} {{ lastName }}</h2>
   <h2>Computed fullname: {{ fullName }}</h2>
- <h2>
-    Total - {{ items.reduce((total, curr) => (total = total + curr.price), 0) }}
-  </h2>
+<button @click="items.push({ id: 4, title: 'Keyboard', price: 50 })">
+    Add Item
+  </button>
    <!-- can be used at multiple places at multiple times -->
+ <!-- Computed properties automatically recalculated when the dependency have changed -->
   <h2>Computed Total : {{ total }}</h2>
 </template>
 
