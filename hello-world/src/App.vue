@@ -6,6 +6,8 @@
  <h2>
     Total - {{ items.reduce((total, curr) => (total = total + curr.price), 0) }}
   </h2>
+   <!-- can be used at multiple places at multiple times -->
+  <h2>Computed Total : {{ total }}</h2>
 </template>
 
 <script>
@@ -40,6 +42,12 @@ export default {
   computed: {
     fullName() {
       return `${this.firstName} ${this.lastName}`;
+    },
+    total() {
+      return this.items.reduce(
+        (total, curr) => (total = total + curr.price),
+        0
+      );
     },
   },
 };
