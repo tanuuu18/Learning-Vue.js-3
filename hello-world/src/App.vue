@@ -1,4 +1,6 @@
 <template>
+ 
+<!-- composed new data properties from existing properties -->
  <h2>Fullname - {{ firstName }} {{ lastName }}</h2>
   <h2>Computed fullname: {{ fullName }}</h2>
 </template>
