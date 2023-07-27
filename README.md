@@ -1,22 +1,15 @@
-# Computed Properties
+# Watchers
 
+Allow you to watch any data or computed property and execute some code in response to changes in the value.
 
+### Example
 
 <ul>
-  <li>
-    Ways to display data in the UI
-    <ul>
-      <li>Static HTML</li>
-      <li>Text interpolation</li>
-      <li>Simple expressions</li>
-      <li>Methods</li>
-      <li>Computed properties</li>
-    </ul>
-  </li>
-  <li>Properties that can be bound to the template like data properties.</li>
-  <li>They are used for composing new data from existing sources.</li>
-  <li>They are highly performant as they are cached calculations which only update when their dependencies change.</li>
+<li>Implement a volume tracker</li>
+<li>See the current volume level</li>
+<li>Increase or decrease the volume level</li>
 </ul>
+
 
 
 
