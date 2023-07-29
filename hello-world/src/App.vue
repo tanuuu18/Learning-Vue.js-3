@@ -6,6 +6,7 @@
     <button @click="volume += 2">Increase</button>
     <button @click="volume -= 2">Decrease</button>
   </div>
+   <input type="text" v-model="movie" />
 </template>
 
 <script>
@@ -16,9 +17,12 @@ export default {
   data(){
     return {
       volume: 0,
+       //After setting this value the api will not call
+      movie: "Tanu",
     },
    methods: { },
   computed: { },
+   //Watchers executed only when the data has changed
  watch: {
     volume(newValue, oldValue) {
      //Will show alert on 16 while increaseing volume not on decresing
@@ -27,6 +31,9 @@ export default {
           "Listening to a high volume for a long time may damage your hearing"
         );
       }
+    },
+    movie(newValue) {
+      console.log(`Calling an API with movie name = ${newValue}`);
     },
   },
 };
