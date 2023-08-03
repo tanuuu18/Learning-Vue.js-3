@@ -2,6 +2,7 @@
   <Greet name="Tanu" profile="Front-end Developer" />
   <Greet name="Shree" profile="Back-end Developer" />
   <Greet name="Tanushree" profile="Full Stack Developer" />
+    <Greet :name="name" :profile="profile" />
 </template>
 
 <script>
@@ -12,7 +13,13 @@ export default {
   components: {
     Greet: Greet,
   },
-       
+   //Using data binding
+  data() {
+    return {
+      name: "Tanu",
+      profile: "MERN Developer",
+    };
+  },    
 };
 </script>
 
