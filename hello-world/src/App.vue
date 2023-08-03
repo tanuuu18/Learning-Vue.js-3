@@ -1,7 +1,7 @@
 <template>
-   <Greet name="Tanu" />
-  <Greet name="Shree" />
-  <Greet name="Tanushree" />
+  <Greet name="Tanu" profile="Front-end Developer" />
+  <Greet name="Shree" profile="Back-end Developer" />
+  <Greet name="Tanushree" profile="Full Stack Developer" />
 </template>
 
 <script>
