@@ -1,5 +1,7 @@
 <template>
-    <Greet />
+   <Greet name="Tanu" />
+  <Greet name="Shree" />
+  <Greet name="Tanushree" />
 </template>
 
 <script>
